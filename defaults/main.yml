@@ -1,0 +1,8 @@
+---
+# defaults file for ansible-role-miniconda
+ubuntu_user_home_path:
+installation_directory: '{{ ubuntu_user_home_path }}/installation-files'
+conda_installer_repo: 'https://repo.anaconda.com/miniconda/Miniconda3-py38_4.12.0-Linux-x86_64.sh'
+conda_home_dir: '{{ ubuntu_user_home_path }}/miniconda3'
+conda_user_id: '1000'
+conda_group_id: '1000'
