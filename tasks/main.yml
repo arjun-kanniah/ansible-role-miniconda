@@ -19,6 +19,3 @@
 
 - name: Run the installer
   ansible.builtin.shell: '{{ installation_directory }}/install-miniconda.sh -b -u -p {{ conda_home_dir }}'
-  args:
-    #chdir: '{{ ubuntu_user_home_path }}'
-    executable: usr/bin/bash
