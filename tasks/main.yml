@@ -3,7 +3,7 @@
 - name: Download Installer for Miniconda
   ansible.builtin.get_url:
     url: '{{ conda_installer_repo }}'
-    dest: '{{ installation_directory }}'
+    dest: '{{ installation_directory }}/install-miniconda.sh'
     checksum: sha256:3190da6626f86eee8abf1b2fd7a5af492994eb2667357ee4243975cdbb175d7a
     mode: 0755
     
@@ -16,7 +16,7 @@
     mode: 0755
 
 - name: Run the installer
-  ansible.builtin.shell: '{{ installation_directory }}/Miniconda3-py38_4.12.0-Linux-x86_64.sh -b -u -p {{ conda_home_dir }}'
+  ansible.builtin.shell: '{{ installation_directory }}/install-miniconda.sh -b -u -p {{ conda_home_dir }}'
   args:
     chdir: '{{ ubuntu_user_home_path }}'
     executable: usr/bin/bash
